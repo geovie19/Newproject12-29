@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools{
-        maven 'M2_HOME'
-    }
     environment {
     registry = 'geovie19/newproject19'
 
@@ -15,16 +12,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/geovie19/Newproject12-29.git'
             }
         }
-         stage('Code Build') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
+        
         stage('Build Image') {
             steps {
                 script{
