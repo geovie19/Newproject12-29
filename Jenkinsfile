@@ -22,9 +22,10 @@ pipeline {
         }
         stage('Deploy image') {
             steps{
-               withDockerRegistry([ geovie19: "geovie19", url: "https://hub.docker.com/repository/docker/geovie19/newproject19" ]) {
-                dockerImage.push()
-               }
+                script{
+                  withDockerRegistry([ geovie19: "geovie19", url: "https://hub.docker.com/repository/docker/geovie19/newproject19" ]) {
+                  dockerImage.push()
+                }
             }
         }
      }
