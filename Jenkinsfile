@@ -22,8 +22,8 @@ pipeline {
         }
         stage('Deploy image') {
             steps{
-               withDockerRegistry([ credentialsID: "geovie19", url: "https://hub.docker.com/repository/docker/geovie19/newproject19" ]) {
-               dockerImage.push()
+               withDockerRegistry([ geovie19: "geovie19", url: "https://hub.docker.com/repository/docker/geovie19/newproject19" ]) {
+                dockerImage.push()
                }
             }
         }
