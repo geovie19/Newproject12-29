@@ -5,7 +5,7 @@ pipeline {
 
     registryCredential = 'geovie19'
     dockerimage = ''
-  }
+   }
      stages {
         stage('Checkout'){
             steps{
@@ -24,10 +24,10 @@ pipeline {
             steps{
                withDockerRegistry([ credentialsID: "geovie19", url: "https://hub.docker.com/repository/docker/geovie19/newproject19" ]) {
                dockerImage.push()
-                    }
-                }
+               }
             }
         }
-    }
+     }
+   
 }
                               
