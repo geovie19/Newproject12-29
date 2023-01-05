@@ -23,9 +23,9 @@ pipeline {
         stage('Deploy image') {
             steps{
                 script{
-                  withCredentials([usernameColonPassword(credentialsId: 'geovie19', variable: '')]) {
-    // some block
-}
+                  dockerImage = withCredentials([usernameColonPassword(credentialsId: 'geovie19', variable: '')]) {
+                   // some block
+                  }
                   dockerImage.push()
                   }
                   
