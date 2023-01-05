@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy image') {
             steps{
                 script{
-                  withDockerRegistry([ geovie19: "dockerhubaccount", url: "https://hub.docker.com/repository/docker/geovie19/newproject19" ]) {
+                  withDockerRegistry( ' ' , registry/Credential) {
                   dockerImage.push()
                   }
                   
