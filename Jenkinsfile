@@ -23,7 +23,9 @@ pipeline {
         stage('Deploy image') {
             steps{
                 script{
-                  docker.withRegistry( ' ' , registry/Credential ) {
+                  withCredentials([usernameColonPassword(credentialsId: 'geovie19', variable: '')]) {
+    // some block
+}
                   dockerImage.push()
                   }
                   
