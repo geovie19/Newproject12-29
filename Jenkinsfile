@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-    registry = 'geovie19/newproject19'
+    registry = "geovie19/newproject19"
 
-    registryCredential = 'Dockerhub'
+    registryCredential = 'geovie19'
     dockerimage = ''
    }
      stages {
@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy image') {
             steps{
                 script{
-                  withDockerRegistry( ' ' , registry/Credential ) {
+                  docker.withRegistry( ' ' , registry/Credential ) {
                   dockerImage.push()
                   }
                   
