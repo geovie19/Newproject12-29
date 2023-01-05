@@ -23,10 +23,8 @@ pipeline {
         stage('Deploy image') {
             steps{
                 script{
-                  dockerImage = withCredentials([usernameColonPassword(credentialsId: 'geovie19', variable: '')]) {
-                   // some block
-                  }
-                  dockerImage.push()
+                    withDockerRegistry( [ geovie19: "dockerhubaccount", url: "https://hub.docker.com/repository/docker/geovie19/newproject19" ] ) {
+                    dockerImage.push()
                   }
                   
                 }  
