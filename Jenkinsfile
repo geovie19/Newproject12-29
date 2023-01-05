@@ -3,7 +3,7 @@ pipeline {
     environment {
     registry = 'geovie19/newproject19'
 
-    registryCredential = 'geovie19'
+    registryCredential = 'Dockerhub'
     dockerimage = ''
    }
      stages {
