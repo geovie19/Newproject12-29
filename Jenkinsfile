@@ -25,7 +25,7 @@ pipeline {
                 // Your steps here
                 sh 'ls -l'
                 sh 'pwd'
-            ""    
+            """  
              }
             }
         
