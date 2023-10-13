@@ -20,13 +20,12 @@ pipeline {
                 }
             }
         }
-         stage('check image') {
+         stage('Example') {
             steps {
-               sh""
-                echo "List content for success"
-                ls -l
-                pwd
-             ""   
+                // Your steps here
+                sh 'ls -l'
+                sh 'pwd'
+             }
             }
         }
         stage('Deploy image') {
