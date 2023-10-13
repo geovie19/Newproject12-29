@@ -25,6 +25,7 @@ pipeline {
                 // Your steps here
                 sh 'ls -l'
                 sh 'pwd'
+            ""    
              }
             }
         }
@@ -33,6 +34,7 @@ pipeline {
                 script{
                     docker.withRegistry('https://registry-1.docker.io/v2/', 'geovie19') {
                     dockerImage.push()
+                        
                   }
                   
                 }  
