@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "jenkinshost-utrainss" do |jenkinshost|
     jenkinshost.vm.box = "centos/7"
     jenkinshost.vm.hostname = "jenkinshost-utrainss"
-    jenkinshost.vm.network "private_network", ip: "192.168.56.172"
+    jenkinshost.vm.network "private_network", ip: "192.168.56.177"
     #jenkinshost.vm.box_url = "utrains/centos7"
     jenkinshost.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--memory", 2048]
