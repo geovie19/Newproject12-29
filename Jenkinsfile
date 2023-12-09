@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        registry = "geovie19/newproject19"
+        registry = "017589840041.dkr.ecr.us-east-1.amazonaws.com/newrepo"
         registryCredential = 'ecrcredential'
         dockerImage = ''
     }
