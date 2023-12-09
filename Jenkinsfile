@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         registry = "geovie19/newproject19"
-        registryCredential = 'geovie19'
+        registryCredential = 'ecrcredential'
         dockerImage = ''
     }
     stages {
