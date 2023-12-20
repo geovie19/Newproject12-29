@@ -28,6 +28,8 @@ pipeline {
                 // Your steps here
                 sh 'ls -l'
                 sh 'pwd'
+                sh 'free -m'
+                sh 'lsblk'
             }
         }
 
