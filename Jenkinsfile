@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         registry = "017589840041.dkr.ecr.us-east-1.amazonaws.com/newrepo"
-        registryCredential = 'ecrcredential'
+        registryCredential = 'ecrcredential2'
         dockerImage = ''
     }
 
