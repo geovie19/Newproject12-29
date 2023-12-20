@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script {
                     // Authenticate with AWS ECR
-                    withCredentials([aws(credentialsId: geovie19, region: 'us-east-1')]) {
+                    withCredentials([aws(credentialsId: registryCredential , region: 'us-east-1')]) {
                         // Push Docker image to AWS ECR
                         docker.withRegistry('https://' + registry, registryCredential) {
                             dockerImage.push()
